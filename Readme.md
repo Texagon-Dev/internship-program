@@ -1,6 +1,6 @@
 # 📄 Internship Program Introduction - Texagon Dev
 
-Welcome to the **Texagon Internship Program**! We're thrilled to have you on board. This program is designed to guide you from the fundamentals of frontend development to building full-stack production-ready applications using cutting-edge technologies. By the end of this internship, you'll have hands-on experience with industry-grade tools and the confidence to contribute meaningfully to real-world projects. This Program Tries to bridge gaps between academic World & Practical world.
+Welcome to the **Texagon Internship Program**! We're thrilled to have you on board. This program is designed to guide you from the fundamentals of initial development to building full-stack production-ready applications using cutting-edge technologies. By the end of this internship, you'll have hands-on experience with industry-grade tools and the confidence to contribute meaningfully to real-world projects. This Program Tries to bridge gaps between academic World & Practical world.
 
 ---
 
