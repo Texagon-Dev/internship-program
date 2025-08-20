@@ -1,95 +1,80 @@
-# **Internship Rules** 
+# 📄 Internship Program Introduction - Texagon Dev
 
-# **1\. Zero Tolerance Policy on Copy Paste of Code**
-
-❌ Direct copy pasting from GenAI (ChatGPT, AI Agent, etc.) is strictly forbidden.  
- If discovered, the internship will be terminated immediately.  
- All work must be originally written by the intern.
+Welcome to the **Texagon Internship Program**! We're thrilled to have you on board. This program is designed to guide you from the fundamentals of frontend development to building full-stack production-ready applications using cutting-edge technologies. By the end of this internship, you'll have hands-on experience with industry-grade tools and the confidence to contribute meaningfully to real-world projects. This Program Tries to bridge gaps between academic World & Practical world.
 
 ---
 
-## **2\. AI as a Guide, Not a Writer**
+## 🔗 About Texagon
 
-* Interns may use AI to:
-
-  * Ask for **concept explanations**
-
-  * Get **debugging hints** or alternative approaches
-
-  * Learn about **best practices**
-
-* AI **must never** be used to generate final deliverables.
-
-* Any AI usage must be followed by **manual re implementation in your own words/code**.
+Texagon is a service-based software house committed to delivering robust digital solutions to global clients. We believe in mentorship, growth, and engineering excellence. Our internship program reflects these values by fostering self-reliance, collaboration, and professionalism.
 
 ---
 
-## **3\. Proof of Understanding**
+## ✅ Internship Objectives
 
-* Interns must be able to:
-
-  * **Explain their code logic line by line**
-
-  * Answer conceptual questions without AI help
-
-  * Modify their own code live during evaluations
-
-* If you cannot explain your code → it will be treated as copied work.
+* Build a **strong foundation** in respected technologies.
+* Gain hands-on experience with 
+    1. Frontend : **HTML, CSS, JavaScript, Tailwind CSS, React, Next.js, Zustand, and Supabase**.
+* Learn best practices in **code quality**, **responsiveness**, **state management**, and **deployment**.
+* Develop **real-world projects** and deploy them using **Cloudflare, Vercel, or Netlify**.
+* Demonstrate the ability to **independently build, test, and explain** your solutions.
 
 ---
 
-## **4\. Code Quality Standards**
+## ⚡Internship Structure
 
-* Ensure **accessibility (a11y)**, performance, and responsive design.
-
-* Always test before submission.
-
----
-
-## **5\. Ethical Practices**
-
-* Never use AI or online forums to fetch a finished project.
-
-* Respect **teamwork & honesty**: collaborate, but never outsource.
+All the internship is divided into **three weeks** & feedback loop system. Last Week will be Fourth Week & Final Project Will be Given to complete the Internship. SuccessFull Internship will be Considered only if the Respected intern is able to get 70+ Points out of 100.
+Each week ends with evaluations, project submissions, and code walkthroughs.
 
 ---
 
-## **6\. Evaluations & Accountability**
+## 📈 Marking Strategy (Frontend Track)
 
-* During evaluation:
+The following breakdown outlines the marking criteria for the **Frontend Internship Program**. Similar structures will be followed in Backend and Mobile tracks, adapted to their respective technologies.
 
-  * You will be asked to **walk through your project live**.
+| Component                         | Weightage (Points) | Evaluation Criteria                                           |
+| --------------------------------- | ------------------ | ------------------------------------------------------------- |
+| **Weekly Projects (W1-W3)**       | 30 points          | Completion, code quality, responsiveness, and interactivity   |
+| **Final Capstone Project**        | 30 points          | Completeness, creativity, technical strength, UI/UX           |
+| **Code Walkthrough & Live Test**  | 15 points          | Understanding of logic, live debugging, real-time changes     |
+| **Git Practices & Documentation** | 10 points          | Commit hygiene, README clarity, folder structure              |
+| **Professional Conduct**          | 5 points           | Timeliness, communication, feedback response                  |
+| **Bonus (Optional Challenges)**   | 10 points (extra)  | Extra effort, animations, enhancements, accessibility, polish |
 
-  * You must demonstrate **real time coding ability**.
+✅ **Pass Criteria**: Minimum **70 out of 100** required to earn internship certification.
 
-  * Random checks will be done for **AI written code patterns**.
-
-* If flagged → internship ends immediately.
-
----
-
-
-## **7\. Deployment & Documentation**
-
-* Use approved platforms (**Vercel/Cloudflare**).
-
-* Maintain **README.md** explaining your project setup.
-
-* Keep **Git commits clean** with meaningful messages.
+> Note: Evaluations are reviewed by mentors weekly and at the end of the program. Any AI-generated or outsourced code disqualifies the intern immediately.
 
 ---
 
-## **Final Rule: Learn, Don’t Cheat**
+## 🔒 Rules & Expectations
 
-This internship is about **becoming a real engineer**.
+* **No copy-paste from GenAI or forums**.
+* AI may be used to **understand concepts**, not to generate code.
+* You must be able to **explain, modify, and build** your code live.
+* Maintain clean code, proper documentation, and consistent Git commits.
 
-* **Do not copy.**
+Violation of rules results in immediate termination. We emphasize **learning and ethics over shortcuts**.
 
-* **Do not outsource.**
+---
 
-* **Do not paste from AI.**
+## 🚀 What You Will Achieve
 
-Use AI only to **learn and grow** , not to replace your effort.
+By the end of the program:
 
-**Violation \= Instant Termination**
+* You will be a **production-ready frontend engineer**.
+* You will have **3 fully deployed projects**.
+* You will have practiced **modern workflows and tools**.
+* You will build confidence to tackle real-world development challenges.
 
+---
+
+## ✍️ Final Notes
+
+* Evaluations take place on **Saturday, Sunday, or Monday** each week.
+* Use your own accounts for deployment platforms.
+* Seek mentorship when needed, but do your own work.
+
+We’re excited to see you grow and build awesome things.
+
+**Welcome to Texagon. Let the journey begin!**
