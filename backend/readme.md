@@ -36,11 +36,111 @@
 
 ---
 
+## Help & Escalation — avoid wasting seniors' time
+
+This section explains where to ask for help, what information to include, and the escalation flow. Follow these rules exactly so seniors can help quickly and you don't block the team.
+
+Checklist (requirements for any help request)
+- Reproduce locally (or provide a reproducible minimal example).
+- Run tests and include failing test output (if any).
+- Git branch name, commit SHA, and PR/issue link (if applicable).
+- Clear error logs and the exact command you ran.
+- What you already tried (commands, stacktrace analysis, search links).
+
+If any of the above is missing, the request will be triaged as "insufficient info" and you will be asked to update it before a senior spends time.
+
+Communication channels (use in this order)
+- 1) Documentation & README: first check this file and `backend/.github/` templates.
+- 2) Issues: open a structured issue in the repo (use the issue template). Non-blocking requests belong here.
+- 3) Slack/Teams — channel: `#backend-help` — use for timed questions (include the triage checklist in your first message).
+- 4) Pager / On-call: `#backend-oncall` — only for production incidents or when the app is down in shared dev/staging.
+
+Office hours & SLAs
+- Office hours: Mon–Fri 09:00–17:00 PKT— mentors available for live code review and quick pairing.
+- Normal question SLA: answer within 24 hours on Issues/Slack during working days.
+- Urgent SLA (blocking development for >4 hours): escalate to the on-call channel and ping `@oncall-backend` (use GitHub issue link + reproduction steps).
+
+How to ask for help — exact template (copy/paste)
+```
+Title: [SHORT] <one-line summary>
+
+Context:
+ - Branch: feat/...
+ - Commit: <short-sha>
+ - Service: api | worker | notifier
+
+Problem: One short paragraph describing the observed behavior vs expected.
+
+Reproduction steps (exact commands):
+1. bun install
+2. docker compose -f docker/docker-compose.yml up -d
+3. cp .env.example .env (edit DB to local)
+4. bunx prisma migrate dev && bunx prisma db seed
+5. bun run dev
+6. curl -v "http://localhost:8000/api/..."
+
+What I tried (bullet list):
+- grep logs, ran `bun run test --testNamePattern="..."`
+- changed X to Y, checked Z
+
+Logs / Errors (paste full stack or attach file):
+```
+
+Attach: failing test, minimal repro repo or single-file gist, relevant logs.
+
+When to escalate to a senior
+- You hit a blocker that prevents the whole cohort from progressing for >4 hours.
+- Production outage or staging environment broken for multiple users.
+- Security vulnerability or leaked secret.
+
+Escalation flow (follow exactly)
+1. Try to resolve with peers and by following the checklist.
+2. If still blocked after 30–60 minutes, open a GitHub Issue with the template and tag `team/backend` + `triage` label.
+3. If this blocks the cohort for >4 hours, post in `#backend-oncall` with the issue link and subject `BLOCKER`.
+4. On-call will acknowledge within 30 minutes during working hours. If no acknowledgement in 30 minutes, escalate in Slack to `@tech-lead`.
+
+Code review & PR guidelines (to reduce back-and-forth)
+- PR title: type(scope): short description — e.g. feat(api): add loans endpoint
+- Include a PR description with: what changed, why, how to run locally, and test plan.
+- Always attach screenshots, curl examples, and exact commands to run e2e or unit tests.
+- Keep PRs small (aim for < 300 LOC). Huge PRs will be returned for rework.
+- Add a checklist in the PR body and mark items completed:
+  - [ ] Manual testing steps
+  - [ ] Unit tests added
+  - [ ] E2E tests added (if applicable)
+  - [ ] .env.example updated
+  - [ ] Swagger updated (if API changed)
+
+Reviewer expectations
+- Reviewers focus on correctness, security, and maintainability.
+- If reviewer requests changes, implement them in a follow-up commit and reply with a short summary.
+
+Common quick fixes you should try before asking
+- Rebuild dev containers / docker compose down && up
+- Clear node/bun cache (`bun cache clean`), reinstall deps, remove `node_modules`/bun.lockb
+- Run `bun run test` with `--runInBand` or specific test name
+- Search repo for similar issues and check PR history
+
+Templates to add (recommended files)
+- `.github/ISSUE_TEMPLATE/help-request.md` — use the "How to ask for help" template above.
+- `.github/PULL_REQUEST_TEMPLATE.md` — include the PR checklist.
+
+Quick blockers & emergency checklist
+- If production is down:
+  1. Post to `#backend-oncall` with `PROD DOWN` and issue link.
+  2. Assign an engineer and set status page / ops note.
+  3. If sensitive data is involved, follow the security playbook (notify SecOps).
+
+Privacy & Safety
+- Never post secrets in Slack or GitHub issues. Use `sops`/vault for sharing secrets. If a secret was leaked, immediately rotate and escalate to `@security`.
+
+---
+
 ## Tech Stack
 
 * **Runtime/Tooling:** Node 24.x, Bun 1.x, Docker, docker‑compose
-* **Frameworks:** Express (wk1), NestJS (wk2+)
-* **Data:** PostgreSQL, Prisma ORM, Redis (wk3+)
+* **Frameworks:** Express, NestJS 
+* **Data:** PostgreSQL, Prisma ORM, Redis
 * **Quality:** TypeScript strict, ESLint/Prettier, Jest + Supertest, Swagger UI
 * **CI/CD:** GitHub Actions, multi‑stage Docker build
 
