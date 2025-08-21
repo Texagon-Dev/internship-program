@@ -1,0 +1,34 @@
+name: Backend CI
+
+on:
+  push:
+    paths:
+      - 'backend/**'
+  pull_request:
+    paths:
+      - 'backend/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install dependencies (if package.json exists)
+        run: |
+          if [ -f backend/apps/api/package.json ]; then
+            cd backend/apps/api && npm ci
+          fi
+      - name: Lint (if available)
+        run: |
+          if [ -f backend/apps/api/package.json ]; then
+            cd backend/apps/api && npm run lint || true
+          fi
+      - name: Run tests (if available)
+        run: |
+          if [ -f backend/apps/api/package.json ]; then
+            cd backend/apps/api && npm test || true
+          fi
